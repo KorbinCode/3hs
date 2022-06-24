@@ -226,7 +226,7 @@ $(BUILD)/icon.smdh: $(CIA_PREFIX)/icon.png
 	$(SILENTMSG) built ... icon.smdh
 
 $(BUILD)/banner.bnr: $(CIA_PREFIX)/banner.png $(CIA_PREFIX)/audio.cwav
-	$(SILENTCMD) bannertool makebanner -ca $(CIA_PREFIX)/audio.cwav -i $(CIA_PREFIX)/banner.png -o $(BUILD)/banner.bnr >/dev/null
+	$(SILENTCMD) bannertool makebanner -ca $(CIA_PREFIX)/audio.cwav -ci $(CIA_PREFIX)/banner.cgfx -o $(BUILD)/banner.bnr >/dev/null
 	$(SILENTMSG) built ... banner.bnr
 
 cia: $(INT_ALL) $(BUILD)/banner.bnr $(BUILD)/icon.smdh $(BUILD)/romfs.bin
