@@ -225,7 +225,7 @@ $(BUILD)/icon.smdh: $(CIA_PREFIX)/icon.png
 	$(SILENTCMD) bannertool makesmdh -f visible,nosavebackups -i $(CIA_PREFIX)/icon.png -s "3hs" -l "3hs" -p "hShop" -o $(BUILD)/icon.smdh >/dev/null
 	$(SILENTMSG) built ... icon.smdh
 
-$(BUILD)/banner.bnr: $(CIA_PREFIX)/banner.png $(CIA_PREFIX)/audio.cwav
+$(BUILD)/banner.bnr: $(CIA_PREFIX)/banner.cgfx $(CIA_PREFIX)/audio.cwav
 	$(SILENTCMD) bannertool makebanner -ca $(CIA_PREFIX)/audio.cwav -ci $(CIA_PREFIX)/banner.cgfx -o $(BUILD)/banner.bnr >/dev/null
 	$(SILENTMSG) built ... banner.bnr
 
